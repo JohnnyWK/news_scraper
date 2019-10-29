@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 
-const Article = require("./models/article");
+const Article = require("./models/Article");
 const Comment = require("./models/comment");
 
 app.use(logger("dev"));
