@@ -24,15 +24,16 @@ module.exports = function (app) {
     app.get("/??", function (req, res) {
         // Query: In our database, go to the animals collection, then "find" everything,
         // but this time, sort it by weight (-1 means descending order)
-        db.scraper.find(), function (error, found) {
-            // Log any errors if the server encounters one
-            if (error) {
-                console.log(error);
+        db.scraper.find(),
+            function (error, found) {
+                // Log any errors if the server encounters one
+                if (error) {
+                    console.log(error);
+                }
+                // Otherwise, send the result of this query to the browser
+                else {
+                    res.json(found);
+                }
             }
-            // Otherwise, send the result of this query to the browser
-            else {
-                res.json(found);
-            }
-        }
     });
 };
