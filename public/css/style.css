@@ -1,0 +1,17 @@
+body { 
+    background-color: rgba(19, 121, 116, 0.924);
+    color: white;
+    text-align: center;
+  }
+
+#wrapper {
+    padding: 10%;
+}
+
+#title {
+    margin-left: 30%;
+}
+
+button {
+    margin-left: 20%;
+}
